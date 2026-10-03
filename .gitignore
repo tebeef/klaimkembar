@@ -1,0 +1,18 @@
+# Rahasia
+.env
+.streamlit/secrets.toml
+
+# Lingkungan Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Data sintetis hasil generate
+data/csv/
+
+# Berkas sistem dan editor
+.DS_Store
+Thumbs.db
+.idea/
