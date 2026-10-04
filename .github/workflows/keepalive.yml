@@ -1,0 +1,19 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    - cron: "0 0 * * 1,4" 
+  workflow_dispatch: 
+
+jobs:
+  ping-database:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping PostgreSQL
+        env:
+          DB_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          # Instal klien PostgreSQL ringan
+          sudo apt-get install -y postgresql-client
+          # Eksekusi kueri sederhana agar tercatat sebagai aktivitas
+          psql "$DB_URL" -c "SELECT 1 AS keepalive;"
