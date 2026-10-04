@@ -3,7 +3,7 @@ import streamlit as st
 import config as C
 
 CSS_STATIS = """
-.block-container{padding-top:1.5rem;padding-bottom:3rem;max-width:1500px;}
+.block-container{padding-top:3.5rem;padding-bottom:3rem;max-width:1500px;}
 #MainMenu{visibility:hidden;} footer{visibility:hidden;}
 /* ---------- Sidebar ---------- */
 [data-testid="stSidebar"]{background:#FFFFFF;border-right:1px solid var(--kk-garis);}
@@ -61,6 +61,18 @@ CSS_STATIS = """
 .st-key-btn_tunda button *{color:#1E293B !important;font-weight:600;}
 .st-key-btn_tolak button{background:var(--kk-tolak);border-color:var(--kk-tolak);}
 .st-key-btn_tolak button *{color:#FFFFFF !important;font-weight:600;}
+/* ---------- Border untuk Input Box ---------- */
+div[data-baseweb="input"], 
+div[data-baseweb="select"], 
+div[data-baseweb="textarea"] {
+    border: 1px solid #CBD5E1 !important; /* Garis tepi abu-abu (Slate 300) */
+    border-radius: 8px !important;
+}
+div[data-baseweb="input"]:hover, 
+div[data-baseweb="select"]:hover, 
+div[data-baseweb="textarea"]:hover {
+    border-color: var(--kk-hijau) !important;
+}
 """
 
 def _variabel():
