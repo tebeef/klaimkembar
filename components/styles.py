@@ -61,16 +61,26 @@ CSS_STATIS = """
 .st-key-btn_tunda button *{color:#1E293B !important;font-weight:600;}
 .st-key-btn_tolak button{background:var(--kk-tolak);border-color:var(--kk-tolak);}
 .st-key-btn_tolak button *{color:#FFFFFF !important;font-weight:600;}
-/* ---------- Border untuk Input Box ---------- */
-div[data-baseweb="input"], 
-div[data-baseweb="select"], 
-div[data-baseweb="textarea"] {
-    border: 1px solid #CBD5E1 !important; /* Garis tepi abu-abu (Slate 300) */
+
+.stTextInput div[data-baseweb="input"],
+.stSelectbox div[data-baseweb="select"],
+.stTextArea div[data-baseweb="textarea"],
+.stNumberInput div[data-baseweb="input"],
+.stDateInput div[data-baseweb="input"] {
+    border: 1px solid #CBD5E1 !important; 
     border-radius: 8px !important;
+    background-color: #FFFFFF !important;
+    box-shadow: none !important;
 }
-div[data-baseweb="input"]:hover, 
-div[data-baseweb="select"]:hover, 
-div[data-baseweb="textarea"]:hover {
+
+.stTextInput div[data-baseweb="input"]:hover,
+.stSelectbox div[data-baseweb="select"]:hover,
+.stTextArea div[data-baseweb="textarea"]:hover,
+.stNumberInput div[data-baseweb="input"]:hover,
+.stDateInput div[data-baseweb="input"]:hover,
+.stTextInput div[data-baseweb="input"]:focus-within,
+.stSelectbox div[data-baseweb="select"]:focus-within,
+.stTextArea div[data-baseweb="textarea"]:focus-within {
     border-color: var(--kk-hijau) !important;
 }
 """
